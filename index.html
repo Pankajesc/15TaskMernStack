@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horizontal List with Specific Hover Effect</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: lightgrey;
+    }
+    li {
+      margin-right: 10px;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+    li a {
+      color: blue;
+      text-decoration: none;
+    }
+    li:not(:last-child)::after {
+      content: "|";
+      margin-left: 10px;
+      color: blue;
+    }
+    li a:hover {
+      color: white;
+    }
+    li a:hover .specific-link {
+      background-color: darkgrey;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#" class="specific-link">Item 3</a></li> <!-- Add class to the specific link -->
+    <li><a href="#">Item 4</a></li>
+  </ul>
+</body>
+</html>
